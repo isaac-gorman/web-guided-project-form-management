@@ -37,9 +37,10 @@ export default function FriendForm(props) {
           />
         </label>
 
-        <label>Email:&nbsp;
+        <label htmlFor='emailInput'>Email:&nbsp;
           {/* 🔥 STEP 6 - Make an input of type `text` for email. */}
           <input
+            id='emailInput'
             type='email'
             name='email'
             value={values.email}
