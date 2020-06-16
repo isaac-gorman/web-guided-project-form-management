@@ -31,10 +31,17 @@ export default function App() {
   const onInputChange = evt => {
     // 🔥 STEP 8 - IMPLEMENT A CHANGE HANDLER (works for inputs and dropdowns)
     // which can change the state of inputs of type text
-
     // a) pull the name of the input from the event object
     // b) pull the value of the input from the event object
+    const { name, value } = evt.target
+
     // c) set a new state for the whole form
+    setFormValues({
+      // copy here all the current values of the form
+      // change the [name] property to be the value
+      ...formValues,
+      [name]: value,
+    })
   }
 
   const onSubmit = evt => {
