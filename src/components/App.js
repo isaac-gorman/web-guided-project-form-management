@@ -57,6 +57,9 @@ export default function App() {
         // 🔥 STEP 2 - The form component needs its props.
         //    Check implementation of FriendForm
         //    to see what props it expects.
+        values={formValues}
+        onInputChange={setFormValues}
+        onSubmit={onSubmit}
       />
 
       {
