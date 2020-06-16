@@ -55,6 +55,7 @@ export default function App() {
       setError('You need to fill out all the info')
       return
     }
+    setError('You need to fill out all the info')
     // c) make a new friend object
     //    set up the new friend with the correct attributes
     //    using the information inside the state of the form
