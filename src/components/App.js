@@ -58,7 +58,7 @@ export default function App() {
         //    Check implementation of FriendForm
         //    to see what props it expects.
         values={formValues}
-        onInputChange={setFormValues}
+        onInputChange={onInputChange}
         onSubmit={onSubmit}
       />
 
