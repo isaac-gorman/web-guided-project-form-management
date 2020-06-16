@@ -61,7 +61,7 @@ export default function App() {
 
     // const newFriend = { ...formValues, id: uuid() }
     const newFriend = {
-      id: uuid(),
+      id: uuid(), // this is just until tomorrow
       username: formValues.username.trim(),
       email: formValues.email.trim(),
       role: formValues.role,
