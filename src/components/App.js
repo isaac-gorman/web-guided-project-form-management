@@ -63,6 +63,7 @@ export default function App() {
     // setFriends([...friends, newFriend])
     setFriends(friends => [newFriend, ...friends]) // this is better when new state depends on old state
     // e) optionally clear the form
+    setFormValues(initialFormValues);
   }
 
   return (
