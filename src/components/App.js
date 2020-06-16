@@ -48,7 +48,11 @@ export default function App() {
     // 🔥 STEP 9 - IMPLEMENT A SUBMIT HANDLER
 
     // a) don't allow the browser to reload!
+    evt.preventDefault()
     // b) don't allow the submission, if any of the formValues is empty!
+    if (!formValues.username || !formValues.email || !formValues.role) {
+      return
+    }
     // c) make a new friend object
     //    set up the new friend with the correct attributes
     //    using the information inside the state of the form
