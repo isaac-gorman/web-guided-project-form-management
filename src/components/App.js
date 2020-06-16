@@ -26,7 +26,7 @@ export default function App() {
   const [friends, setFriends] = useState(initialFriendsList)
 
   // 🔥 STEP 1 - WE NEED STATE TO HOLD ALL VALUES OF THE FORM!
-  const formValues = {} // fix this using the state hook
+  const [formValues, setFormValues] = useState(initialFormValues)
 
   const onInputChange = evt => {
     // 🔥 STEP 8 - IMPLEMENT A CHANGE HANDLER (works for inputs and dropdowns)
