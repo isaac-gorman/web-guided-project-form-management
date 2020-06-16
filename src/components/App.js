@@ -58,6 +58,7 @@ export default function App() {
     // c) make a new friend object
     //    set up the new friend with the correct attributes
     //    using the information inside the state of the form
+    const newFriend = { ...formValues, id: uuid() }
     // d) update the list of friends in state with the new friend
     // e) optionally clear the form
   }
@@ -65,7 +66,7 @@ export default function App() {
   return (
     <div className='container'>
       <header><h1>Friends App</h1></header>
-      <span style={{color:'red'}}>{error}</span>
+      <span style={{ color: 'red' }}>{error}</span>
       <FriendForm
         // 🔥 STEP 2 - The form component needs its props.
         //    Check implementation of FriendForm
