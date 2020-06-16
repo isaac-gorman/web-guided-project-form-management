@@ -24,6 +24,7 @@ const initialFormValues = {
 
 export default function App() {
   const [friends, setFriends] = useState(initialFriendsList)
+  const [error, setError] = useState('')
 
   // 🔥 STEP 1 - WE NEED STATE TO HOLD ALL VALUES OF THE FORM!
   const [formValues, setFormValues] = useState(initialFormValues)
@@ -51,6 +52,7 @@ export default function App() {
     evt.preventDefault()
     // b) don't allow the submission, if any of the formValues is empty!
     if (!formValues.username || !formValues.email || !formValues.role) {
+      setError('You need to fill out all the info')
       return
     }
     // c) make a new friend object
@@ -63,7 +65,7 @@ export default function App() {
   return (
     <div className='container'>
       <header><h1>Friends App</h1></header>
-
+      <span style={{color:'red'}}>{error}</span>
       <FriendForm
         // 🔥 STEP 2 - The form component needs its props.
         //    Check implementation of FriendForm
